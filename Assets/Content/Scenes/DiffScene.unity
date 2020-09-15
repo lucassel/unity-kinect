@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64e56d1906043f47991698d9a1121c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PointCloud1: {fileID: 4900000, guid: e70faee9e1ad44b4d9da7f659f4df9f2, type: 3}
-  PointCloud2: {fileID: 4900000, guid: 640531df958bcb34486e37ce28b2f201, type: 3}
+  PointCloud1: {fileID: 4900000, guid: 54c99b5e6408ab948afa5a8542ee4c73, type: 3}
+  PointCloud2: {fileID: 4900000, guid: f359f317f4efedb4792f87abd3d3be7f, type: 3}
   Material1: {fileID: 2100000, guid: fbe7407cb0991ad4e9016bb929930ff5, type: 2}
   Material2: {fileID: 2100000, guid: ca45b09ac156e4b4796a37af3f1150a5, type: 2}
 --- !u!4 &1500611902

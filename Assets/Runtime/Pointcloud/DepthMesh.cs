@@ -26,9 +26,9 @@ public class DepthMesh : MonoBehaviour
     _filter = GetComponent<MeshFilter>();
     _renderer = GetComponent<MeshRenderer>();
     _material = _renderer.sharedMaterial;
-    
+
     _mesh = new Mesh();
-    _mesh.MarkDynamic();
+    //_mesh.MarkDynamic();
     if (Use32BitMesh)
     {
       _mesh.indexFormat = UnityEngine.Rendering.IndexFormat.UInt32;
@@ -82,28 +82,28 @@ public class DepthMesh : MonoBehaviour
 
   public void WritePointCloud()
   {
+    UpdateDepth = false;
+    UpdateMesh();
     var p = AssetDatabase.GetAssetPath(TextFile);
-    //string path = $"Assets/Resources/test_{DateTime.Now.Hour}.txt";
-
-    //Write some text to the test.txt file
-    StreamWriter writer = new StreamWriter(p, false);
+    var writer = new StreamWriter(p, false);
     Debug.Log($"writing to {p}!");
-    for (int i = 0; i < _reader.vertices.Length; i++)
+    var wrote = 0;
+    for (var i = 0; i < _reader.vertices.Length; i++)
     {
-      if (float.IsNegativeInfinity(_reader.vertices[i].x))
-      {
-        continue;
-      }
-      else
+      if (!float.IsNegativeInfinity(_reader.vertices[i].x))
       {
         writer.WriteLine($"{_reader.vertices[i].x}/{_reader.vertices[i].y}/{_reader.vertices[i].z}");
+        wrote++;
       }
     }
 
+    Debug.Log($"Wrote {wrote}/{_reader.vertices.Length} points away");
+
     writer.Close();
+    UpdateDepth = true;
   }
 
-  private void UpdateMesh()
+   void UpdateMesh()
   {
     var buffer = new Vector3[_reader.NumPoints];
 
@@ -137,18 +137,17 @@ public class DepthMesh : MonoBehaviour
     vertArray.CopyTo(_vertices);
     vertArray.Dispose();
   }
-  
+
   DepthReader _reader;
   Mesh _mesh;
   MeshFilter _filter;
   MeshRenderer _renderer;
   Material _material;
-  
+
   Vector3[] _vertices;
   int[] _indices;
 
   bool _meshCreated;
-  
-  static readonly int PointSize = Shader.PropertyToID("_PointSize");
 
+  static readonly int PointSize = Shader.PropertyToID("_PointSize");
 }

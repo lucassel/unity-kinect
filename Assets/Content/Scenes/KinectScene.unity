@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &38139622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
   scale: 1
   Use32BitMesh: 1
   UpdateDepth: 1
-  TextFile: {fileID: 4900000, guid: e70faee9e1ad44b4d9da7f659f4df9f2, type: 3}
+  TextFile: {fileID: 4900000, guid: f359f317f4efedb4792f87abd3d3be7f, type: 3}
 --- !u!23 &38139623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -219,6 +219,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1517819516
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1517819518}
+  - component: {fileID: 1517819517}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1517819517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517819516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e64e56d1906043f47991698d9a1121c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointCloud1: {fileID: 4900000, guid: 54c99b5e6408ab948afa5a8542ee4c73, type: 3}
+  PointCloud2: {fileID: 4900000, guid: f359f317f4efedb4792f87abd3d3be7f, type: 3}
+  Material1: {fileID: 2100000, guid: fbe7407cb0991ad4e9016bb929930ff5, type: 2}
+  Material2: {fileID: 2100000, guid: 1b6b08a3226d1224ebf35a412f960e22, type: 2}
+--- !u!4 &1517819518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1517819516}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02602768, y: 0.27747232, z: 1.9106328}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736670513
 GameObject:

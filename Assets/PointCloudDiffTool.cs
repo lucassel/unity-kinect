@@ -26,7 +26,7 @@ public class PointCloudDiffTool : MonoBehaviour
    {
       var p = AssetDatabase.GetAssetPath(file);
       string[] lines = File.ReadAllLines(p);
-      print($"mesh has {lines.Length} points");
+      print($"file has {lines.Length} points");
 
       
       var vertices = new Vector3[lines.Length];
@@ -54,6 +54,7 @@ public class PointCloudDiffTool : MonoBehaviour
          }
       }
       
+      print($"mesh has {vertices.Length} points");
       
       mesh.SetVertices(vertices);
       mesh.SetIndices(indices, MeshTopology.Points, 0);

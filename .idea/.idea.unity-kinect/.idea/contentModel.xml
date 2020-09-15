@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\dev\unity-kinect\unity-kinect" t="IncludeRecursive">
+    <e p="C:\dev\unity-kinect" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -65,6 +65,8 @@
         </e>
         <e p="PointCloudDiffTool.cs" t="Include" />
         <e p="Resources" t="Include">
+          <e p="PC_WITH.txt" t="Include" />
+          <e p="PC_WITHOUT.txt" t="Include" />
           <e p="Pointcloud_no_chair.txt" t="Include" />
           <e p="Pointcloud_with_chair.txt" t="Include" />
         </e>
@@ -170,6 +172,6 @@
       <e p="unity-kinect.sln" t="IncludeFlat" />
     </e>
     <e p="C:\Users\Lucy\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Lucy\.Rider2019.2\system\resharper-host\Local\Transient\ReSharperHost\v192\SolutionCaches\_unity-kinect.1265204446.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Lucy\.Rider2019.2\system\resharper-host\Local\Transient\ReSharperHost\v192\SolutionCaches\_unity-kinect.-660129270.00" t="ExcludeRecursive" />
   </component>
 </project>
